@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ลอยกระทงออนไลน์</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ลอยกระทงออนไลน์</h1>
+
+        <!-- เลือกตกแต่งกระทง -->
+        <div id="customization-section">
+            <h2>เลือกการตกแต่งกระทง</h2>
+            <div id="graphic-options">
+                <img src="images/adf.png" alt="กระทง 1" onclick="selectGraphic('graphic1.png')">
+                <img src="images/sdf.png" alt="กระทง 2" onclick="selectGraphic('graphic2.png')">
+                <img src="images/vd.png" alt="กระทง 3" onclick="selectGraphic('graphic3.png')">
+            </div>
+        </div>
+
+        <!-- กรอกข้อมูลชื่อและคำอวยพร -->
+        <div id="info-section">
+            <h2>ใส่ชื่อและคำอวยพร</h2>
+            <input type="text" id="nameInput" placeholder="ชื่อของคุณ">
+            <textarea id="messageInput" placeholder="คำอวยพร"></textarea>
+            <button onclick="launchKrathong()">ลอยกระทง</button>
+        </div>
+
+        <!-- แสดงกระทงลอยบนแม่น้ำ -->
+        <div id="river-section">
+            <div id="krathong" class="hidden">
+                <img id="selectedGraphic" src="" alt="กระทง">
+                <p id="displayName"></p>
+                <p id="displayMessage"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

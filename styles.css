@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/AdobeStock_309149144.jpeg'); /* ใส่ URL ของภาพ */
+    background-size: cover; /* ให้ภาพขยายเต็มจอ */
+    background-position: center; /* จัดภาพให้อยู่กึ่งกลาง */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #ffd700;
+}
+
+#customization-section, #info-section, #river-section {
+    margin: 20px 0;
+}
+
+#graphic-options img {
+    width: 100px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+#graphic-options img:hover {
+    border-color: #ff6b6b;
+}
+
+button {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ff4d4d;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#river-section {
+    position: relative;
+    height: 300px;
+    background-image: url('river-background.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+#krathong {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    animation: float 5s ease-in-out infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+#selectedGraphic {
+    width: 100px;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, -10px); }
+}
