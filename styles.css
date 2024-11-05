@@ -1,93 +1,74 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    color: #fff;
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/AdobeStock_309149144.jpeg'); /* เปลี่ยนเป็นพาธของรูปพื้นหลัง */
+    background-size: cover; /* ปรับขนาดพื้นหลังให้เต็มพื้นที่ */
+    background-position: center; /* จัดตำแหน่งพื้นหลังให้อยู่กลาง */
+    background-repeat: no-repeat; /* ไม่ให้ภาพพื้นหลังซ้ำ */
+    background-attachment: fixed; /* ทำให้ภาพพื้นหลังอยู่คงที่เมื่อเลื่อน */
+    color: #333;
     text-align: center;
-    margin: 0;
-    padding: 0;
-    background-image: url('images/AdobeStock_309149144.jpeg'); /* ใส่ URL ของภาพ */
-    background-size: cover; /* ให้ภาพขยายเต็มจอ */
-    background-position: center; /* จัดภาพให้อยู่กึ่งกลาง */
+    padding: 20px;
+    overflow: hidden; /* ป้องกันการเลื่อนหน้าจอ */
 }
 
 .container {
     max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: auto;
+    color: white;
 }
 
-h1 {
-    color: #ffd700;
+#form-container {
+    margin-bottom: 20px;
 }
 
-#customization-section, #info-section, #river-section {
-    margin: 20px 0;
-}
-
-#graphic-options img {
-    width: 100px;
-    margin: 10px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    border-radius: 5px;
-}
-
-#graphic-options img:hover {
-    border-color: #ff6b6b;
+input {
+    padding: 10px;
+    margin: 5px;
+    width: calc(50% - 22px);
 }
 
 button {
-    background-color: #ff6b6b;
-    color: #fff;
+    padding: 10px 15px;
+    background-color: #C42031;
+    color: white;
     border: none;
-    padding: 10px 20px;
-    margin: 10px;
     cursor: pointer;
-    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #ff4d4d;
+    background-color: #8B183D;
 }
 
-input, textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#river-section {
+#floating-container {
     position: relative;
-    height: 300px;
-    background-image: url('river-background.jpg');
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
+    margin-top: 350px;
 }
 
-#krathong {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    animation: float 5s ease-in-out infinite;
+#floating-kra-thong {
+    width: 300px; /* ปรับขนาดกราฟิกกระทงตามต้องการ */
+    animation: float 3s ease-in-out infinite; /* เริ่มต้นอนิเมชัน */
 }
 
-.hidden {
-    display: none;
+#message {
+    font-size: 20px;
+    margin-top: -250px; /* ปรับตำแหน่งข้อความขึ้นไปด้านบนกระทง */
+    animation: float 3s ease-in-out infinite; /* เพิ่มอนิเมชันให้ข้อความ */
+    position: absolute; /* ทำให้ข้อความอยู่ในตำแหน่งที่ต้องการ */
+    left: 55%; /* จัดตำแหน่งให้กลางกระทง */
+    transform: translateX(-50%); /* ให้ข้อความอยู่ตรงกลาง */
+    color: #ffffff; /* ปรับสีข้อความตามที่ต้องการ */
 }
 
-#selectedGraphic {
-    width: 100px;
-}
 
+/* อนิเมชันลอยน้ำ */
 @keyframes float {
-    0%, 100% { transform: translate(-50%, 0); }
-    50% { transform: translate(-50%, -10px); }
+    0% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(-20px); /* ปรับค่าตามที่ต้องการ */
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

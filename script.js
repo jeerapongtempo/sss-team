@@ -1,25 +1,15 @@
-let selectedGraphic = ''; // ตั้งค่าเป็นค่าว่างไว้เพื่อเช็คการเลือกกระทง
+document.getElementById("float-button").addEventListener("click", function() {
+    const name = document.getElementById("name").value;
+    const wish = document.getElementById("wish").value;
 
-function selectGraphic(graphic) {
-    selectedGraphic = graphic; // กำหนดภาพกระทงที่เลือก
-    document.getElementById('selectedGraphic').src = selectedGraphic; // ตั้งค่า src ของภาพทันที
-    alert('คุณเลือกกระทงแบบที่ ' + graphic);
-}
+    if (name && wish) {
+        // ซ่อนฟอร์มกรอกข้อมูลและปุ่ม
+        document.getElementById("form-container").style.display = "none";
+        document.getElementById("float-button").style.display = "none"; // ซ่อนปุ่มลอยกระทง
+        document.getElementById("floating-container").style.display = "block";
 
-function launchKrathong() {
-    const name = document.getElementById('nameInput').value;
-    const message = document.getElementById('messageInput').value;
-
-    if (name && message && selectedGraphic) {  // ตรวจสอบให้มั่นใจว่ามีการเลือกกระทงแล้ว
-        document.getElementById('selectedGraphic').src = selectedGraphic;  // แสดงภาพที่เลือก
-        document.getElementById('displayName').innerText = name;
-        document.getElementById('displayMessage').innerText = message;
-
-        // แสดงกระทงลอย
-        document.getElementById('krathong').classList.remove('hidden');
-    } else if (!selectedGraphic) {
-        alert('กรุณาเลือกกระทงก่อนลอยกระทง');
+        document.getElementById("message").innerText = `ชื่อ: ${name} \nคำอวยพร: ${wish}`;
     } else {
-        alert('กรุณาใส่ชื่อและคำอวยพรก่อนลอยกระทง');
+        alert("กรุณากรอกชื่อและคำอวยพร");
     }
-}
+});
