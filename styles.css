@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('images/AdobeStock_309149144.jpeg'); /* เปลี่ยนเป็นพาธของรูปพื้นหลัง */
+    background-image: url('images/bg.jpg'); /* เปลี่ยนเป็นพาธของรูปพื้นหลัง */
     background-size: cover; /* ปรับขนาดพื้นหลังให้เต็มพื้นที่ */
     background-position: center; /* จัดตำแหน่งพื้นหลังให้อยู่กลาง */
     background-repeat: no-repeat; /* ไม่ให้ภาพพื้นหลังซ้ำ */
@@ -41,7 +41,7 @@ button:hover {
 
 #floating-container {
     position: relative;
-    margin-top: 350px;
+    margin-top: 200px;
 }
 
 #floating-kra-thong {
@@ -51,10 +51,10 @@ button:hover {
 
 #message {
     font-size: 20px;
-    margin-top: -250px; /* ปรับตำแหน่งข้อความขึ้นไปด้านบนกระทง */
+    margin-top: -450px; /* ปรับตำแหน่งข้อความขึ้นไปด้านบนกระทง */
     animation: float 3s ease-in-out infinite; /* เพิ่มอนิเมชันให้ข้อความ */
     position: absolute; /* ทำให้ข้อความอยู่ในตำแหน่งที่ต้องการ */
-    left: 55%; /* จัดตำแหน่งให้กลางกระทง */
+    left: 35%; /* จัดตำแหน่งให้กลางกระทง */
     transform: translateX(-50%); /* ให้ข้อความอยู่ตรงกลาง */
     color: #ffffff; /* ปรับสีข้อความตามที่ต้องการ */
 }

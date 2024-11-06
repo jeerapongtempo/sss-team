@@ -8,7 +8,7 @@ document.getElementById("float-button").addEventListener("click", function() {
         document.getElementById("float-button").style.display = "none"; // ซ่อนปุ่มลอยกระทง
         document.getElementById("floating-container").style.display = "block";
 
-        document.getElementById("message").innerText = `ชื่อ: ${name} \nคำอวยพร: ${wish}`;
+        document.getElementById("message").innerText = ` ${name} \n ${wish}`;
     } else {
         alert("กรุณากรอกชื่อและคำอวยพร");
     }
